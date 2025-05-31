@@ -4,9 +4,7 @@ import petModel from '../dao/models/Pet.js';
 export const mockingPetsController = async (req, res) => {
   try {
     const pets = generateManyMockPets(100);
-
     const insertedPets = await petModel.insertMany(pets);
-
     res.status(201).json({
       status: 'success',
       message: `${insertedPets.length} mascotas mock creadas en MongoDB.`,

@@ -17,6 +17,5 @@ export const generateManyMockPets = (num) => {
         };
         pets.push(pet);
     }
-
     return pets;
 };
