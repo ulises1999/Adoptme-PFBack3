@@ -1,6 +1,6 @@
 import PetDTO from "../dto/Pet.dto.js";
 import { CustomError } from "../services/errors/custom.error.js";
-import { errorDictionary } from "../services/errors/errorDictionary.js";
+import { errorDictionary } from "../services/errors/EErrors.js";
 import { petsService } from "../services/index.js"
 import __dirname from "../utils/index.js";
 
