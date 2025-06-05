@@ -1,6 +1,6 @@
 import fs from "fs"
 
-const rutaLog = "./src/logs/error.log"
+const rutaLog = "./src/logs/errors.log"
 
 export const errorHandler = (error, req, res, next) => {
     if (fs.existsSync(rutaLog)) {

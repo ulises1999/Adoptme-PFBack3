@@ -3,6 +3,7 @@ import { CustomError } from "../services/errors/custom.error.js";
 import { errorDictionary } from "../services/errors/EErrors.js";
 import { petsService } from "../services/index.js"
 import __dirname from "../utils/index.js";
+import logger from "../utils/logger.js";
 
 const getAllPets = async (req, res) => {
     const pets = await petsService.getAll();
@@ -116,7 +117,7 @@ const createPetWithImage = async (req, res, next) => {
             birthDate,
             image: `${__dirname}/../public/img/${file.filename}`
         });
-        console.log(pet);
+        logger.info(pet);
         const result = await petsService.create(pet);
         res.status(201).send({ status: "success", payload: result });
     } catch (error) {

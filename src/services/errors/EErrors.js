@@ -94,4 +94,22 @@ export const errorDictionary = {
             statusCode: 404
         },
     },
+
+    auth: {
+        NO_TOKEN: {
+            code: 'AUTH_001',
+            message: 'No se proporcionó un token de autenticación.',
+            statusCode: 401
+        },
+        INVALID_TOKEN: {
+            code: 'AUTH_002',
+            message: 'Token de autenticación inválido o expirado.',
+            statusCode: 401
+        },
+        FORBIDDEN_ACCESS: {
+            code: 'AUTH_003',
+            message: 'Acceso denegado. No tienes permisos suficientes.',
+            statusCode: 403
+        }
+    },
   }
