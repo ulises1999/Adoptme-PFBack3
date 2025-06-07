@@ -7,12 +7,12 @@ export const errorDictionary = {
         },
         DUPLICATE_EMAIL: {
             code: 'USER_002',
-            message: 'El correo electrónico ya está registrado.',
+            message: 'Correo electronico ya existente',
             statusCode: 400
         },
         INVALID_PASSWORD: {
             code: 'USER_003',
-            message: 'La contraseña no cumple con los requisitos mínimos.',
+            message: 'Cumplir requisitos para contraseña',
             statusCode: 400
         },
         NOT_FOUND: {
@@ -98,17 +98,17 @@ export const errorDictionary = {
     auth: {
         NO_TOKEN: {
             code: 'AUTH_001',
-            message: 'No se proporcionó un token de autenticación.',
+            message: 'Token no proporcionado.',
             statusCode: 401
         },
         INVALID_TOKEN: {
             code: 'AUTH_002',
-            message: 'Token de autenticación inválido o expirado.',
+            message: 'Token invalido o expirado.',
             statusCode: 401
         },
         FORBIDDEN_ACCESS: {
             code: 'AUTH_003',
-            message: 'Acceso denegado. No tienes permisos suficientes.',
+            message: 'Acceso denegado. No tienes los permisos necesarios.',
             statusCode: 403
         }
     },

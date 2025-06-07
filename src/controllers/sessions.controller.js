@@ -12,7 +12,7 @@ const register = async (req, res, next) => {
             CustomError.generateError(
                 'Registro de Usuario',
                 errorDictionary.user.MISSING_FIELDS.message,
-                `Los campos 'first_name', 'last_name', 'email' y 'password' son obligatorios.`,
+                `Completar lso campos 'first_name', 'last_name', 'email' y 'password'`,
                 errorDictionary.user.MISSING_FIELDS.statusCode
             );
         }
@@ -21,7 +21,7 @@ const register = async (req, res, next) => {
             CustomError.generateError(
                 'Registro de Usuario',
                 errorDictionary.user.DUPLICATE_EMAIL.message,
-                `El email '${email}' ya se encuentra registrado.`,
+                `El email '${email}' ya existe.`,
                 errorDictionary.user.DUPLICATE_EMAIL.statusCode
             );
         }
@@ -47,7 +47,7 @@ const login = async (req, res) => {
             CustomError.generateError(
                 'Error de Autenticación',
                 errorDictionary.general.BAD_REQUEST.message,
-                'El email y la contraseña son obligatorios para iniciar sesión.',
+                'El email y la contraseña son obligatorios.',
                 errorDictionary.general.BAD_REQUEST.statusCode
             );
         }
@@ -65,7 +65,7 @@ const login = async (req, res) => {
             CustomError.generateError(
                 'Error de Autenticación',
                 errorDictionary.user.UNAUTHORIZED.message,
-                'La contraseña proporcionada es incorrecta.',
+                'Contraseña incorrecta.',
                 errorDictionary.user.UNAUTHORIZED.statusCode
             );
         }
@@ -93,7 +93,7 @@ const unprotectedLogin = async (req, res,next) => {
             CustomError.generateError(
                 'Error de Autenticación',
                 errorDictionary.general.BAD_REQUEST.message,
-                'El email y la contraseña son obligatorios para iniciar sesión.',
+                'El email y la contraseña son obligatorios.',
                 errorDictionary.general.BAD_REQUEST.statusCode
             );
         }
@@ -111,7 +111,7 @@ const unprotectedLogin = async (req, res,next) => {
             CustomError.generateError(
                 'Error de Autenticación',
                 errorDictionary.user.UNAUTHORIZED.message,
-                'La contraseña proporcionada es incorrecta.',
+                'Contraseña incorrecta.',
                 errorDictionary.user.UNAUTHORIZED.statusCode
             );
         }

@@ -17,7 +17,7 @@ const createPet = async (req, res, next) => {
             CustomError.generateError(
                 'MissingPetFields',
                 errorDictionary.pet.MISSING_FIELDS.message,
-                `Los campos obligatorios (nombre, especie, fecha de nacimiento) faltan en el cuerpo de la solicitud.`,
+                `Falta proporcionar especie, nombre y fecha de nacimiento`,
                 errorDictionary.pet.MISSING_FIELDS.statusCode
             );
         }
@@ -55,7 +55,7 @@ const updatePet = async (req, res, next) => {
              CustomError.generateError(
                  "PetUpdateFailed",
                  "No se pudo actualizar la mascota.",
-                 `La operación de actualización para la mascota con ID ${petId} falló sin un error explícito.`,
+                 `La actualización de la mascota con ID: ${petId} falló sin un error explícito.`,
                  errorDictionary.general.SERVER_ERROR.statusCode,
              );
         }
@@ -99,7 +99,7 @@ const createPetWithImage = async (req, res, next) => {
             CustomError.generateError(
                 'MissingPetFields',
                 errorDictionary.pet.MISSING_FIELDS.message,
-                `Los campos obligatorios (nombre, especie, fecha de nacimiento) faltan en el cuerpo de la solicitud.`,
+                `Falta proporcionar especie, nombre y fecha de nacimiento`,
                 errorDictionary.pet.MISSING_FIELDS.statusCode,
             );
         }
